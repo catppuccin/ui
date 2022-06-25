@@ -1,7 +1,7 @@
 {
   "name": "catuccino",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@catppuccin/palette": "^0.1.4",
     "@testing-library/jest-dom": "^5.16.4",
