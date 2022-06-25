@@ -1,5 +1,9 @@
 // import colors from './scripts/colors';
-const colors = require('./scripts/colors.mjs');
+// import palettes from '@catppuccin/palette';
+
+const colors = require('./scripts/colors.js');
+
+console.log('colors tailwind', colors);
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
