@@ -1,0 +1,21 @@
+{
+	"include": [
+		"src"
+	],
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"noEmit": true,
+		"checkJs": true,
+		"allowJs": true,
+		"jsx": "preserve",
+		"lib": [
+			"dom",
+			"esnext"
+		],
+		"removeComments": true,
+		"baseUrl": "src"
+	}
+}
