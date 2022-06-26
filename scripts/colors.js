@@ -1,11 +1,23 @@
 const { variants } = require('./palette');
 
 const getColors = () => {
-	console.log('palette', variants);
+	const palette = 'macchiato';
+	let colors = {};
+
+	Object.keys(variants[palette]).forEach((color) => {
+		colors[color] = variants[palette][color].hex;
+	});
+
+	colors['transparent'] = 'transparent';
+
+	return colors;
 };
 
-getColors();
+const getVariants = () => {
+	return Object.keys(variants);
+};
 
 module.exports = {
 	getColors,
+	getVariants,
 };
