@@ -7,14 +7,15 @@ export const Input = (props) => {
 	return (
 		<input
 			className={cx(
-				'py-2 px-4',
 				'bg-surface0',
-				'border',
 				'border-overlay0',
 				'active:border-lavender',
 				'focus:border-lavender',
+				'py-2 px-4',
+				'border-2',
 				'rounded-md',
 				'outline-none',
+				'transition-colors',
 			)}
 			{...props}
 		/>
