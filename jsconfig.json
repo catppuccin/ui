@@ -1,0 +1,13 @@
+{
+	"include": [
+		"src"
+	],
+	"compilerOptions": {
+		"target": "ESNext",
+		"allowSyntheticDefaultImports": true,
+		"removeComments": true,
+		"baseUrl": "src",
+		"module": "commonjs",
+		"esModuleInterop": true
+	}
+}
