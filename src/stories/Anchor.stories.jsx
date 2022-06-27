@@ -15,5 +15,6 @@ const Template = (args) => <Anchor
 export const Preview = Template.bind({});
 Preview.args = {
 	children: 'Link content',
+	underline: 'hover',
 	href: '#yes'
 };
