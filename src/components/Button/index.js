@@ -22,9 +22,10 @@ export const Button = ({ primary, variant, ...props }) => {
 			type="button"
 			className={cx(
 				`${mode}-surface${variant}`,
+				'hover:border-lavender',
+				'active:border-lavender',
 				'py-2 px-4',
 				'rounded-md',
-				`hover:${mode}-surface2`,
 				'transition-colors',
 				'border-2',
 				{
