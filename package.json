@@ -31,7 +31,7 @@
 		"build-tailwind": "npx tailwindcss -c ./tailwind.config.js -i ./src/main.css -o ./src/main_build.css",
 		"build-storybook": "build-storybook -s public",
 		"start": "start-storybook -p 6006 -s public",
-		"watch": "klap watch"
+		"watch": "microbundle watch --jsx React.createElement"
 	},
 	"eslintConfig": {
 		"extends": [
