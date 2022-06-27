@@ -1,64 +1,82 @@
 {
-  "name": "catuccino",
-  "version": "0.1.0",
-  "private": false,
-  "dependencies": {
-    "@catppuccin/palette": "^0.1.4",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "classnames": "^2.3.1",
-    "postcss": "^8.4.14",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off",
-          "eqeqeq": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-interactions": "^6.5.9",
-    "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-webpack5": "^6.5.9",
-    "@storybook/manager-webpack5": "^6.5.9",
-    "@storybook/node-logger": "^6.5.9",
-    "@storybook/preset-create-react-app": "^4.1.2",
-    "@storybook/react": "^6.5.9",
-    "@storybook/testing-library": "^0.0.13",
-    "babel-plugin-named-exports-order": "^0.0.2",
-    "prop-types": "^15.8.1",
-    "webpack": "^5.73.0"
-  }
+	"name": "catuccino",
+	"version": "0.1.11",
+	"private": false,
+	"type": "module",
+	"description": "A React.JS ui kit based on 😸 catppuccin - Soothing pastel theme for the high-spirited!",
+	"keywords": [
+		"catuccino",
+		"catppuccin",
+		"ui-kit",
+		"ui",
+		"component library"
+	],
+	"repository": "didair/catuccino",
+	"license": "MIT",
+	"author": "Andreas Ekström <didair@msn.com>",
+	"exports": {
+		"require": "./dist/catuccino.cjs",
+		"default": "./dist/catuccino.modern.js"
+	},
+	"main": "dist/catuccino.cjs",
+	"module": "dist/catuccino.module.js",
+	"unpkg": "dist/catuccino.umd.js",
+	"source": "src/index.js",
+	"files": [
+		"dist",
+		"dist/*.css"
+	],
+	"scripts": {
+		"build": "microbundle --jsx React.createElement",
+		"build-tailwind": "npx tailwindcss -c ./tailwind.config.js -i ./src/main.css -o ./src/main_build.css",
+		"build-storybook": "build-storybook -s public",
+		"start": "start-storybook -p 6006 -s public",
+		"watch": "klap watch"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"overrides": [
+			{
+				"files": [
+					"**/*.stories.*"
+				],
+				"rules": {
+					"eqeqeq": "off",
+					"import/no-anonymous-default-export": "off"
+				}
+			}
+		]
+	},
+	"peerDependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"dependencies": {
+		"@catppuccin/palette": "^0.1.4",
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/react": "^13.3.0",
+		"@testing-library/user-event": "^13.5.0",
+		"prop-types": "^15.8.1",
+		"classnames": "^2.3.1",
+		"postcss": "^8.4.14",
+		"web-vitals": "^2.1.4"
+	},
+	"devDependencies": {
+		"@storybook/addon-actions": "^6.5.9",
+		"@storybook/addon-essentials": "^6.5.9",
+		"@storybook/addon-interactions": "^6.5.9",
+		"@storybook/addon-links": "^6.5.9",
+		"@storybook/builder-webpack5": "^6.5.9",
+		"@storybook/manager-webpack5": "^6.5.9",
+		"@storybook/node-logger": "^6.5.9",
+		"@storybook/preset-create-react-app": "^4.1.2",
+		"@storybook/react": "^6.5.9",
+		"@storybook/testing-library": "^0.0.13",
+		"babel-plugin-named-exports-order": "^0.0.2",
+		"microbundle": "^0.15.0",
+		"webpack": "^5.73.0"
+	}
 }
