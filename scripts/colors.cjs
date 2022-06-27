@@ -1,4 +1,4 @@
-const { variants } = require('./palette');
+const { variants } = require('./palette.cjs');
 
 const getColors = () => {
 	const palette = 'macchiato';
