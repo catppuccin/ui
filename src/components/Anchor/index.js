@@ -26,7 +26,7 @@ Anchor.propTypes = {
 	 */
 	as: PropTypes.oneOfType([
 		PropTypes.element,
-		PropTypes.oneOf('a'),
+		PropTypes.oneOf(['a']),
 	]),
 	/**
 	 * Configure when underline should be shown
