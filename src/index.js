@@ -1,6 +1,6 @@
 import './main.css';
 
-export * from 'components/Anchor';
-export * from 'components/Button';
-export * from 'components/Heading';
-export * from 'components/Input';
+export * from './components/Anchor';
+export * from './components/Button';
+export * from './components/Heading';
+export * from './components/Input';
