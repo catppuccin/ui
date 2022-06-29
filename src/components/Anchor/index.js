@@ -4,6 +4,7 @@ import cx from 'classnames';
 
 export const Anchor = ({ as, underline, ...props }) => {
 
+	let element = 'a';
 	const anchorProps = {
 		...props,
 		className: cx(
@@ -17,7 +18,11 @@ export const Anchor = ({ as, underline, ...props }) => {
 		),
 	};
 
-	return createElement(as ?? 'a', anchorProps, props.children);
+	if (as != null) {
+		element = as;
+	}
+
+	return createElement(element, anchorProps, props.children);
 };
 
 Anchor.propTypes = {
