@@ -1,8 +1,7 @@
 {
 	"name": "catuccino",
-	"version": "0.1.11",
+	"version": "0.1.12",
 	"private": false,
-	"type": "module",
 	"description": "A React.JS ui kit based on 😸 catppuccin - Soothing pastel theme for the high-spirited!",
 	"keywords": [
 		"catuccino",
@@ -14,20 +13,26 @@
 	"repository": "didair/catuccino",
 	"license": "MIT",
 	"author": "Andreas Ekström <didair@msn.com>",
-	"exports": {
-		"require": "./dist/catuccino.cjs",
-		"default": "./dist/catuccino.modern.js"
-	},
-	"main": "dist/catuccino.cjs",
-	"module": "dist/catuccino.module.js",
-	"unpkg": "dist/catuccino.umd.js",
 	"source": "src/index.js",
+	"main": "./dist/catuccino.js",
+	"jsnext:main": "./dist/catuccino.modern.js",
+	"module": "./dist/catuccino.module.js",
+	"syntax": {
+		"esmodules": "./dist/catuccino.modern.js"
+	},
+	"exports": {
+		".": {
+			"browser": "./dist/catuccino.module.js",
+			"import": "./dist/catuccino.module.js",
+			"require": "./dist/catuccino.js"
+		}
+	},
 	"files": [
 		"dist",
 		"dist/*.css"
 	],
 	"scripts": {
-		"build": "microbundle --jsx React.createElement",
+		"build": "microbundle --no-compress -f cjs,esm,modern --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
 		"build-storybook": "build-storybook -s public",
 		"start": "start-storybook -p 6006 -s public",
 		"watch": "microbundle watch --jsx React.createElement"
@@ -49,19 +54,29 @@
 			}
 		]
 	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
 	"peerDependencies": {
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react": "^17.0.2 || ^18.0.0",
+		"react-dom": "^17.0.2 || ^18.0.0"
 	},
 	"dependencies": {
 		"@catppuccin/palette": "^0.1.4",
 		"@testing-library/jest-dom": "^5.16.4",
 		"@testing-library/react": "^13.3.0",
 		"@testing-library/user-event": "^13.5.0",
-		"prop-types": "^15.8.1",
 		"classnames": "^2.3.1",
-		"postcss": "^8.4.14",
-		"web-vitals": "^2.1.4"
+		"prop-types": "^15.8.1"
 	},
 	"devDependencies": {
 		"@storybook/addon-actions": "^6.5.9",
@@ -74,8 +89,18 @@
 		"@storybook/preset-create-react-app": "^4.1.2",
 		"@storybook/react": "^6.5.9",
 		"@storybook/testing-library": "^0.0.13",
+		"autoprefixer": "^10.4.7",
 		"babel-plugin-named-exports-order": "^0.0.2",
 		"microbundle": "^0.15.0",
+		"postcss": "^8.4.14",
+		"postcss-loader": "^7.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tailwindcss": "^0.0.0-insiders.60a0ae2",
 		"webpack": "^5.73.0"
+	},
+	"overrides": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	}
 }
