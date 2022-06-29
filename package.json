@@ -11,6 +11,7 @@
 		"component library"
 	],
 	"repository": "didair/catuccino",
+	"homepage": "https://didair.github.io/catuccino",
 	"license": "MIT",
 	"author": "Andreas Ekström <didair@msn.com>",
 	"source": "src/index.js",
@@ -32,10 +33,12 @@
 		"dist/*.css"
 	],
 	"scripts": {
+		"predeploy": "npm run build-storybook",
 		"build": "microbundle --no-compress -f cjs,esm,modern --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
 		"build-storybook": "build-storybook -s public",
 		"start": "start-storybook -p 6006 -s public",
-		"watch": "microbundle watch --jsx React.createElement"
+		"watch": "microbundle watch --jsx React.createElement",
+		"deploy-storybook": "gh-pages -d storybook-static"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -91,6 +94,7 @@
 		"@storybook/testing-library": "^0.0.13",
 		"autoprefixer": "^10.4.7",
 		"babel-plugin-named-exports-order": "^0.0.2",
+		"gh-pages": "^4.0.0",
 		"microbundle": "^0.15.0",
 		"postcss": "^8.4.14",
 		"postcss-loader": "^7.0.0",
