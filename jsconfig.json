@@ -3,11 +3,13 @@
 		"src"
 	],
 	"compilerOptions": {
-		"target": "ESNext",
+		"target": "ES6",
 		"allowSyntheticDefaultImports": true,
 		"removeComments": true,
 		"baseUrl": "src",
-		"module": "commonjs",
-		"esModuleInterop": true
+		"module": "ESNext",
+		"jsx": "react",
+		"esModuleInterop": true,
+		"outDir": "dist"
 	}
 }
