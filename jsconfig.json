@@ -1,0 +1,15 @@
+{
+	"include": [
+		"src"
+	],
+	"compilerOptions": {
+		"target": "ES6",
+		"allowSyntheticDefaultImports": true,
+		"removeComments": true,
+		"baseUrl": "src",
+		"module": "ESNext",
+		"jsx": "react",
+		"esModuleInterop": true,
+		"outDir": "dist"
+	}
+}
