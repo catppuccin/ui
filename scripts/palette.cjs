@@ -826,4 +826,4 @@ module.exports = {
 	palettes,
 	variants: palettes.variants,
 	labels: palettes.labels,
-};
+}
