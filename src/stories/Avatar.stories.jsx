@@ -14,10 +14,12 @@ Name.args = {
 	border: 'visible',
 	background: 'mantle',
 	name: 'Andreas Ekström',
+	size: 'medium',
 };
 
 export const Image = Template.bind({});
 Image.args = {
 	border: 'visible',
 	src: 'https://aekstrom.me/assets/face.jpg',
+	size: 'medium',
 };
