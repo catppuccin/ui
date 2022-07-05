@@ -35,8 +35,8 @@
 	"scripts": {
 		"predeploy": "npm run build-storybook",
 		"build": "microbundle --no-compress -f cjs,esm,modern --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
-		"build-storybook": "build-storybook -s public",
-		"start": "start-storybook -p 6006 -s public",
+		"build-storybook": "build-storybook",
+		"start": "start-storybook -p 6006",
 		"watch": "microbundle watch --jsx React.createElement",
 		"deploy-storybook": "gh-pages -d storybook-static"
 	},
@@ -74,14 +74,11 @@
 		"react-dom": "^17.0.2 || ^18.0.0"
 	},
 	"dependencies": {
-		"@catppuccin/palette": "^0.1.4",
-		"@testing-library/jest-dom": "^5.16.4",
-		"@testing-library/react": "^13.3.0",
-		"@testing-library/user-event": "^13.5.0",
 		"classnames": "^2.3.1",
 		"prop-types": "^15.8.1"
 	},
 	"devDependencies": {
+		"@catppuccin/tailwindcss": "^0.1.0",
 		"@storybook/addon-actions": "^6.5.9",
 		"@storybook/addon-essentials": "^6.5.9",
 		"@storybook/addon-interactions": "^6.5.9",
@@ -92,6 +89,9 @@
 		"@storybook/preset-create-react-app": "^4.1.2",
 		"@storybook/react": "^6.5.9",
 		"@storybook/testing-library": "^0.0.13",
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/react": "^13.3.0",
+		"@testing-library/user-event": "^13.5.0",
 		"autoprefixer": "^10.4.7",
 		"babel-plugin-named-exports-order": "^0.0.2",
 		"gh-pages": "^4.0.0",
@@ -100,7 +100,7 @@
 		"postcss-loader": "^7.0.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"tailwindcss": "^0.0.0-insiders.60a0ae2",
+		"tailwindcss": "^3.1.4",
 		"webpack": "^5.73.0"
 	},
 	"overrides": {
