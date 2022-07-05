@@ -33,9 +33,8 @@
 		"dist/*.css"
 	],
 	"scripts": {
-		"predeploy": "npm run build-storybook",
 		"build": "microbundle --no-compress -f cjs,esm,modern --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
-		"build-storybook": "build-storybook",
+		"build-storybook": "build-storybook -o docs-build",
 		"start": "start-storybook -p 6006",
 		"watch": "microbundle watch --jsx React.createElement",
 		"deploy-storybook": "gh-pages -d storybook-static"
