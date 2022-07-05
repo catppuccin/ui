@@ -1,6 +1,5 @@
 import './main.css';
 
-// Todo: remove this comment later
 export const palettes = [
 	'latte',
 	'frappe',
