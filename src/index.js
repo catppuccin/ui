@@ -1,5 +1,12 @@
 import './main.css';
 
+export const palettes = [
+	'latte',
+	'frappe',
+	'macchiato',
+	'mocha',
+];
+
 export * from './components/Anchor';
 export * from './components/Avatar';
 export * from './components/Button';

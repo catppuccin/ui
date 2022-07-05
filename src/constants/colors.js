@@ -10,7 +10,7 @@ export const backgrounds = [
 	'overlay2',
 ];
 
-export const text = [
+export const typography = [
 	'text',
 	'subtext0',
 	'overlay1',
@@ -22,15 +22,9 @@ export const text = [
 ];
 
 export const highlights = [
-	'text-text',
-	'text-subtext0',
-	'text-overlay1',
 	'red',
 	'green',
 	'yellow',
-	'blue',
 	'pink',
 	'teal',
-	'peach',
-	'rosewater',
 ];
