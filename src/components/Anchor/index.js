@@ -23,6 +23,7 @@ export const Anchor = ({ as, underline, ...props }) => {
 	}
 
 	return createElement(element, anchorProps, props.children);
+
 };
 
 Anchor.propTypes = {
