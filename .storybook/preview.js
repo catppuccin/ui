@@ -1,4 +1,5 @@
 import '../src/main.css';
+import './storybook.css';
 
 const palettes = {
 	'Latte': 'latte',
