@@ -2,28 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-export const Heading = ({ size, variant, ...props }) => {
+export const HeadingSizeVariations = {
+	'lg': 'text-lg',
+	'xl': 'text-xl',
+	'2xl': 'text-2xl',
+	'3xl': 'text-3xl',
+	'4xl': 'text-4xl',
+	'5xl': 'text-5xl',
+	'6xl': 'text-6xl',
+	'7xl': 'text-7xl',
+	'8xl': 'text-8xl',
+	'9xl': 'text-9xl',
+};
 
-	/** REQUIRE TAILWIND STYLES
-	 * text-lg
-	 * text-xl
-	 * text-2xl
-	 * text-3xl
-	 * text-4xl
-	 * text-5xl
-	 * text-6xl
-	 * text-7xl
-	 * text-8xl
-	 * text-9xl
-	 * text-subtext0
-	 * text-subtext1
-	 */
+export const HeadingColorVariations = {
+	text: 'text-text',
+	subtext: 'text-subtext0',
+	overlay: 'text-overlay1',
+	rosewater: 'text-rosewater',
+	green: 'text-green',
+	peach: 'text-peach',
+	maroon: 'text-maroon',
+	blue: 'text-blue',
+	red: 'text-red',
+	green: 'text-green',
+	yellow: 'text-yellow',
+	pink: 'text-pink',
+	teal: 'text-teal',
+};
+
+export const Heading = ({ size, color, ...props }) => {
 
 	return (
 		<h2
 			className={cx(
-				`text-${size}`,
-				`text-subtext${variant}`,
+				HeadingSizeVariations[size],
+				HeadingColorVariations[color],
 			)}
 			{...props}
 		/>
@@ -35,25 +49,15 @@ Heading.propTypes = {
 	/**
 	 * Configure text size of Heading
 	 */
-	size: PropTypes.oneOf([
-		'xl',
-		'2xl',
-		'3xl',
-		'4xl',
-		'5xl',
-		'6xl',
-		'7xl',
-		'8xl',
-		'9xl',
-	]),
+	size: PropTypes.oneOf(Object.keys(HeadingSizeVariations)),
 
 	/**
 	 * Configure text color
 	 */
-	variant: PropTypes.oneOf(['0', '1'])
+	color: PropTypes.oneOf(Object.keys(HeadingColorVariations)),
 };
 
 Heading.defaultProps = {
 	size: 'xl',
-	variant: '0',
+	color: 'text',
 };
