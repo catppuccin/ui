@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { typography } from 'constants/colors';
 
 export const ParagraphSizeVariations = {
 	xs: 'text-xs',
@@ -19,9 +20,7 @@ export const ParagraphSizeVariations = {
 };
 
 export const ParagraphColorVariations = {
-	foreground: 'text-text',
-	subtext: 'text-subtext0',
-	subtle: 'text-overlay1'
+	...typography.base,
 };
 
 export const Paragraph = ({ children, ...props }) => {
@@ -40,7 +39,7 @@ export const Paragraph = ({ children, ...props }) => {
 };
 
 Paragraph.defaultProps = {
-	size: 'base',
+	size: 'text',
 	color: 'foreground',
 };
 

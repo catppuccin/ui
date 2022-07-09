@@ -1,10 +1,18 @@
 import React from 'react';
 
-import { Paragraph } from '../components/Paragraph';
+import { Paragraph, ParagraphColorVariations } from '../components/Paragraph';
 
 export default {
 	title: 'Components/Paragraph',
 	component: Paragraph,
+	argTypes: {
+		color: {
+			control: {
+				type: 'select',
+				options: Object.keys(ParagraphColorVariations),
+			}
+		},
+	}
 };
 
 const Template = (args) => <Paragraph {...args} />;
@@ -12,7 +20,7 @@ const Template = (args) => <Paragraph {...args} />;
 export const Foreground = Template.bind({});
 Foreground.args = {
 	children: 'Text in paragraph',
-	color: 'foreground',
+	color: 'text',
 	size: 'base',
 };
 
@@ -23,9 +31,9 @@ Subtext.args = {
 	size: 'base',
 };
 
-export const Subtle = Template.bind({});
-Subtle.args = {
+export const Overlay = Template.bind({});
+Overlay.args = {
 	children: 'Text in paragraph',
-	color: 'subtle',
+	color: 'overlay',
 	size: 'base',
 };
