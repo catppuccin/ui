@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { typography } from 'constants/colors';
 
 export const HeadingSizeVariations = {
 	'lg': 'text-lg',
@@ -16,19 +17,8 @@ export const HeadingSizeVariations = {
 };
 
 export const HeadingColorVariations = {
-	text: 'text-text',
-	subtext: 'text-subtext0',
-	overlay: 'text-overlay1',
-	rosewater: 'text-rosewater',
-	green: 'text-green',
-	peach: 'text-peach',
-	maroon: 'text-maroon',
-	blue: 'text-blue',
-	red: 'text-red',
-	green: 'text-green',
-	yellow: 'text-yellow',
-	pink: 'text-pink',
-	teal: 'text-teal',
+	...typography.base,
+	...typography.highlights
 };
 
 export const Heading = ({ size, color, ...props }) => {

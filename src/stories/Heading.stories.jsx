@@ -1,10 +1,18 @@
 import React from 'react';
 
-import { Heading } from '../components/Heading';
+import { Heading, HeadingColorVariations } from '../components/Heading';
 
 export default {
 	title: 'Components/Heading',
 	component: Heading,
+	argTypes: {
+		color: {
+			control: {
+				type: 'select',
+				options: Object.keys(HeadingColorVariations),
+			}
+		},
+	}
 };
 
 const Template = (args) => <Heading {...args} />;
