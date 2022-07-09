@@ -73,11 +73,11 @@
 		"react-dom": "^17.0.2 || ^18.0.0"
 	},
 	"dependencies": {
+		"@catppuccin/tailwindcss": "^0.1.0",
 		"classnames": "^2.3.1",
 		"prop-types": "^15.8.1"
 	},
 	"devDependencies": {
-		"@catppuccin/tailwindcss": "^0.1.0",
 		"@storybook/addon-actions": "^6.5.9",
 		"@storybook/addon-essentials": "^6.5.9",
 		"@storybook/addon-interactions": "^6.5.9",
