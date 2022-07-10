@@ -10,7 +10,7 @@ import './_checkbox.css';
 export const CheckboxColorVariations = {
 	...typography.base,
 	...typography.highlights,
-}
+};
 
 export const Checkbox = ({ color, label, ...props }) => {
 	const id = useId('cb');
