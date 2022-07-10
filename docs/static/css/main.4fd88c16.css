@@ -643,6 +643,9 @@ video {
 .inline-flex {
   display: inline-flex;
 }
+.table {
+  display: table;
+}
 .h-9 {
   height: 2.25rem;
 }
@@ -1157,4 +1160,4 @@ body {
 	        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
-/*# sourceMappingURL=main.c5fe7062.css.map*/
+/*# sourceMappingURL=main.4fd88c16.css.map*/
