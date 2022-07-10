@@ -1,0 +1,19 @@
+.checkbox-after::after {
+	@apply transition-all;
+	@apply delay-75;
+	@apply duration-300;
+	@apply block;
+	@apply opacity-0;
+	@apply w-3;
+	@apply h-3;
+	@apply bg-current;
+
+	content: '';
+	transform: scale(0.3);
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 12 12' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2px'%3E%3Cpath d='M1.4,5.582,5.764,9.945,14.4,1.4' /%3E%3C/svg%3E");
+}
+
+.checkbox-after:checked::after {
+	@apply opacity-100;
+	@apply scale-100;
+}
