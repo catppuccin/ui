@@ -1,6 +1,8 @@
-import { useId } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+
+import { useId } from '../../libs/id';
 import { typography } from '../../constants/colors';
 
 import './_checkbox.css';
@@ -11,7 +13,7 @@ export const CheckboxColorVariations = {
 }
 
 export const Checkbox = ({ color, label, ...props }) => {
-	const id = useId();
+	const id = useId('cb');
 
 	return <>
 		<input
