@@ -1,7 +1,7 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { typography } from 'constants/colors';
+import { typography } from '../../constants/colors';
 
 import './_checkbox.css';
 

@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 export const Input = (props) => {
@@ -22,9 +20,6 @@ export const Input = (props) => {
 	);
 
 }
-
-Input.propTypes = {
-};
 
 Input.defaultProps = {
 };
