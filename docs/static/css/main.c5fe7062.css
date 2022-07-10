@@ -637,6 +637,9 @@ video {
   bottom: 0px;
   left: 0px;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .inline-flex {
   display: inline-flex;
 }
@@ -649,6 +652,9 @@ video {
 .h-16 {
   height: 4rem;
 }
+.h-7 {
+  height: 1.75rem;
+}
 .w-9 {
   width: 2.25rem;
 }
@@ -657,6 +663,12 @@ video {
 }
 .w-16 {
   width: 4rem;
+}
+.w-7 {
+  width: 1.75rem;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .list-inside {
   list-style-position: inside;
@@ -669,6 +681,10 @@ video {
 }
 .list-decimal {
   list-style-type: decimal;
+}
+.appearance-none {
+  -webkit-appearance: none;
+          appearance: none;
 }
 .items-center {
   align-items: center;
@@ -719,6 +735,11 @@ video {
   border-color: rgba(110, 115, 141, var(--tw-border-opacity));
   border-color: rgba(var(--ctp-overlay0), var(--tw-border-opacity));
 }
+.bg-base {
+  --tw-bg-opacity: 1;
+  background-color: rgba(36, 39, 58, var(--tw-bg-opacity));
+  background-color: rgba(var(--ctp-base), var(--tw-bg-opacity));
+}
 .bg-crust {
   --tw-bg-opacity: 1;
   background-color: rgba(24, 25, 38, var(--tw-bg-opacity));
@@ -739,10 +760,29 @@ video {
   background-color: rgba(73, 77, 100, var(--tw-bg-opacity));
   background-color: rgba(var(--ctp-surface1), var(--tw-bg-opacity));
 }
+.bg-overlay0 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(110, 115, 141, var(--tw-bg-opacity));
+  background-color: rgba(var(--ctp-overlay0), var(--tw-bg-opacity));
+}
+.bg-overlay1 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(128, 135, 162, var(--tw-bg-opacity));
+  background-color: rgba(var(--ctp-overlay1), var(--tw-bg-opacity));
+}
+.bg-overlay2 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(147, 154, 183, var(--tw-bg-opacity));
+  background-color: rgba(var(--ctp-overlay2), var(--tw-bg-opacity));
+}
 .bg-surface2 {
   --tw-bg-opacity: 1;
   background-color: rgba(91, 96, 120, var(--tw-bg-opacity));
   background-color: rgba(var(--ctp-surface2), var(--tw-bg-opacity));
+}
+.bg-surface0\/40 {
+  background-color: rgba(54, 58, 79, 0.4);
+  background-color: rgba(var(--ctp-surface0), 0.4);
 }
 .bg-cover {
   background-size: cover;
@@ -812,11 +852,6 @@ video {
 .text-\[1rem\] {
   font-size: 1rem;
 }
-.text-rosewater {
-  --tw-text-opacity: 1;
-  color: rgba(244, 219, 214, var(--tw-text-opacity));
-  color: rgba(var(--ctp-rosewater), var(--tw-text-opacity));
-}
 .text-text {
   --tw-text-opacity: 1;
   color: rgba(202, 211, 245, var(--tw-text-opacity));
@@ -831,6 +866,11 @@ video {
   --tw-text-opacity: 1;
   color: rgba(128, 135, 162, var(--tw-text-opacity));
   color: rgba(var(--ctp-overlay1), var(--tw-text-opacity));
+}
+.text-rosewater {
+  --tw-text-opacity: 1;
+  color: rgba(244, 219, 214, var(--tw-text-opacity));
+  color: rgba(var(--ctp-rosewater), var(--tw-text-opacity));
 }
 .text-green {
   --tw-text-opacity: 1;
@@ -1026,6 +1066,17 @@ body {
   color: rgba(var(--ctp-teal), var(--tw-text-opacity));
 }
 
+.checked\:border-lavender:checked {
+  --tw-border-opacity: 1;
+  border-color: rgba(183, 189, 248, var(--tw-border-opacity));
+  border-color: rgba(var(--ctp-lavender), var(--tw-border-opacity));
+}
+
+.checked\:bg-surface1\/70:checked {
+  background-color: rgba(73, 77, 100, 0.7);
+  background-color: rgba(var(--ctp-surface1), 0.7);
+}
+
 .hover\:border-surface2:hover {
   --tw-border-opacity: 1;
   border-color: rgba(91, 96, 120, var(--tw-border-opacity));
@@ -1066,5 +1117,44 @@ body {
     --tw-text-opacity: 1;
     color: rgba(var(--ctp-text), var(--tw-text-opacity))
 }
+.checkbox-after::after {
 
-/*# sourceMappingURL=main.4995fc05.css.map*/
+	transition-property: all;
+
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	transition-delay: 75ms;
+
+	transition-duration: 300ms;
+
+	display: block;
+
+	opacity: 0;
+
+	width: 0.75rem;
+
+	height: 0.75rem;
+
+	background-color: currentColor;
+
+	content: '';
+	-webkit-transform: scale(0.3);
+	        transform: scale(0.3);
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewbox=%270 0 12 12%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272px%27%3E%3Cpath d=%27M1.4,5.582,5.764,9.945,14.4,1.4%27 /%3E%3C/svg%3E");
+	        mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewbox=%270 0 12 12%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272px%27%3E%3Cpath d=%27M1.4,5.582,5.764,9.945,14.4,1.4%27 /%3E%3C/svg%3E")
+}
+
+.checkbox-after:checked::after {
+
+	opacity: 1;
+
+	--tw-scale-x: 1;
+
+	--tw-scale-y: 1;
+
+	-webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+
+	        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+/*# sourceMappingURL=main.c5fe7062.css.map*/
