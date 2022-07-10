@@ -33,7 +33,7 @@
 		"dist/*.css"
 	],
 	"scripts": {
-		"build": "microbundle --no-compress -f cjs,esm,modern --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
+		"build": "microbundle --no-compress -f cjs,esm,modern --globals react=React,react-dom=ReactDOM --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
 		"build-storybook": "build-storybook -o docs-build",
 		"start": "start-storybook -p 6006",
 		"watch": "microbundle watch --jsx React.createElement",
@@ -78,6 +78,8 @@
 		"prop-types": "^15.8.1"
 	},
 	"devDependencies": {
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+		"@babel/plugin-proposal-optional-chaining": "^7.18.6",
 		"@storybook/addon-a11y": "^6.5.9",
 		"@storybook/addon-actions": "^6.5.9",
 		"@storybook/addon-essentials": "^6.5.9",
