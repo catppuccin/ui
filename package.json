@@ -37,6 +37,8 @@
 		"build-storybook": "build-storybook -o docs-build",
 		"start": "start-storybook -p 6006",
 		"watch": "microbundle watch --jsx React.createElement",
+		"deploy": "npm run build && npm publish",
+		"deploy-next": "npm run build && npm publish --tag next",
 		"deploy-storybook": "gh-pages -d storybook-static"
 	},
 	"eslintConfig": {
