@@ -1,0 +1,19 @@
+.radio-after::after {
+	@apply transition-all;
+	@apply delay-75;
+	@apply duration-300;
+	@apply block;
+	@apply opacity-0;
+	@apply w-2;
+	@apply h-2;
+	@apply bg-current;
+	@apply rounded-full;
+
+	content: '';
+	transform: scale(0.3);
+}
+
+.radio-after:checked::after {
+	@apply opacity-100;
+	@apply scale-100;
+}
