@@ -5,27 +5,27 @@ import cx from 'classnames';
 import { useId } from '../../libs/id';
 import { typography } from '../../constants/colors';
 
-import './_checkbox.css';
+import './_radio.css';
 
-export const CheckboxColorVariations = {
+export const RadioColorVariations = {
 	...typography.base,
 	...typography.highlights,
 };
 
-export const Checkbox = ({ color, label, ...props }) => {
+export const Radio = ({ color, label, ...props }) => {
 	const id = useId('cb');
 
-	return <>
+	return <div className="inline-flex items-center">
 		<input
-			type="checkbox"
+			type="radio"
 			id={id}
 			className={cx(
-				CheckboxColorVariations[color],
-				'checkbox-after',
+				RadioColorVariations[color],
+				'radio-after',
 				'appearance-none',
 				'transition-colors',
 				'h-7 w-7',
-				'rounded-md',
+				'rounded-full',
 				'bg-surface0/40',
 				'border-2',
 				'border-surface2',
@@ -51,18 +51,18 @@ export const Checkbox = ({ color, label, ...props }) => {
 				)}
 			/>
 		: null}
-	</>
+	</div>
 
 };
 
-Checkbox.defaultProps = {
+Radio.defaultProps = {
 	color: 'lavender',
 	label: null,
 	disabled: false,
 };
 
-Checkbox.propTypes = {
+Radio.propTypes = {
 	label: PropTypes.string,
 	disabled: PropTypes.bool,
-	color: PropTypes.oneOf(Object.keys(CheckboxColorVariations)),
+	color: PropTypes.oneOf(Object.keys(RadioColorVariations)),
 };

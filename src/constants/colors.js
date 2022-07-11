@@ -27,5 +27,6 @@ export const typography = {
 		yellow: 'text-yellow',
 		pink: 'text-pink',
 		teal: 'text-teal',
+		lavender: 'text-lavender',
 	},
 };

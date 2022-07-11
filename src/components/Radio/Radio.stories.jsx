@@ -1,28 +1,27 @@
 import React from 'react';
 
-import { Checkbox, CheckboxColorVariations } from './index';
+import { Radio, RadioColorVariations } from './index';
 
 export default {
-	title: 'Components/Checkbox',
-	component: Checkbox,
+	title: 'Components/Radio',
+	component: Radio,
 	argTypes: {
 		color: {
 			control: {
 				type: 'select',
-				options: Object.keys(CheckboxColorVariations),
+				options: Object.keys(RadioColorVariations),
 			}
 		},
 	}
 };
 
-const Template = (args) => <Checkbox {...args} />;
-const Multiple = (args) => <>
+const Template = (args) => <>
 	<div>
-		<Checkbox {...args} />
+		<Radio {...args} name="radio-button" value="optionA" />
 	</div>
 
 	<div className="mt-3">
-		<Checkbox {...args} checked />
+		<Radio {...args} name="radio-button" value="optionB" checked />
 	</div>
 </>;
 
@@ -30,7 +29,7 @@ export const With_Label = Template.bind({});
 
 With_Label.args = {
 	color: 'lavender',
-	label: 'Label for checkbox'
+	label: 'Label for radio'
 };
 
 export const Without_Label = Template.bind({});
@@ -40,10 +39,10 @@ Without_Label.args = {
 	label: null,
 };
 
-export const Disabled = Multiple.bind({});
+export const Disabled = Template.bind({});
 
 Disabled.args = {
 	color: 'lavender',
-	label: 'Label for disabled checkbox',
+	label: 'Label for disabled radio',
 	disabled: true,
 };
