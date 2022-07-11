@@ -29,21 +29,21 @@ const Multiple = (args) => <>
 export const With_Label = Template.bind({});
 
 With_Label.args = {
-	color: 'text',
+	color: 'lavender',
 	label: 'Label for checkbox'
 };
 
 export const Without_Label = Template.bind({});
 
 Without_Label.args = {
-	color: 'text',
+	color: 'lavender',
 	label: null,
 };
 
 export const Disabled = Multiple.bind({});
 
 Disabled.args = {
-	color: 'text',
+	color: 'lavender',
 	label: 'Label for disabled checkbox',
 	disabled: true,
 };

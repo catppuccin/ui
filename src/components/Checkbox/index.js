@@ -29,7 +29,7 @@ export const Checkbox = ({ color, label, ...props }) => {
 				'bg-surface0/40',
 				'border-2',
 				'border-surface2',
-				'checked:border-lavender',
+				'checked:border-current',
 				'checked:bg-surface1/70',
 				'inline-flex',
 				'items-center',
@@ -56,7 +56,7 @@ export const Checkbox = ({ color, label, ...props }) => {
 };
 
 Checkbox.defaultProps = {
-	color: 'text',
+	color: 'lavender',
 	label: null,
 	disabled: false,
 };
