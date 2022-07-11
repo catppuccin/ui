@@ -35,6 +35,8 @@ export const Checkbox = ({ color, label, ...props }) => {
 				'items-center',
 				'justify-center',
 				'cursor-pointer',
+				'disabled:cursor-not-allowed',
+				'disabled:opacity-60',
 			)}
 
 			{...props}

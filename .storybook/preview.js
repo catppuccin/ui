@@ -1,3 +1,4 @@
+import '../src/fonts.css';
 import '../src/main.css';
 import './storybook.css';
 

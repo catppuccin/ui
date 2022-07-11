@@ -16,6 +16,15 @@ export default {
 };
 
 const Template = (args) => <Checkbox {...args} />;
+const Multiple = (args) => <>
+	<div>
+		<Checkbox {...args} />
+	</div>
+
+	<div className="mt-3">
+		<Checkbox {...args} checked />
+	</div>
+</>;
 
 export const With_Label = Template.bind({});
 
@@ -29,4 +38,12 @@ export const Without_Label = Template.bind({});
 Without_Label.args = {
 	color: 'text',
 	label: null,
+};
+
+export const Disabled = Multiple.bind({});
+
+Disabled.args = {
+	color: 'text',
+	label: 'Label for disabled checkbox',
+	disabled: true,
 };
