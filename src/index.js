@@ -17,3 +17,4 @@ export * from './components/Input';
 export * from './components/List';
 export * from './components/Paragraph';
 export * from './components/Radio';
+export * from './components/Switch';
