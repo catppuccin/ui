@@ -639,6 +639,9 @@ video {
   bottom: 0px;
   left: 0px;
 }
+.z-10 {
+  z-index: 10;
+}
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -663,6 +666,9 @@ video {
 .h-7 {
   height: 1.75rem;
 }
+.h-full {
+  height: 100%;
+}
 .w-9 {
   width: 2.25rem;
 }
@@ -674,6 +680,14 @@ video {
 }
 .w-7 {
   width: 1.75rem;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.translate-x-full {
+  --tw-translate-x: 100%;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
   cursor: pointer;
@@ -705,6 +719,9 @@ video {
 }
 .rounded-md {
   border-radius: 0.375rem;
+}
+.rounded-\[20px\] {
+  border-radius: 20px;
 }
 .border {
   border-width: 1px;
@@ -742,6 +759,9 @@ video {
   --tw-border-opacity: 1;
   border-color: rgba(110, 115, 141, var(--tw-border-opacity));
   border-color: rgba(var(--ctp-overlay0), var(--tw-border-opacity));
+}
+.border-current {
+  border-color: currentColor;
 }
 .bg-base {
   --tw-bg-opacity: 1;
@@ -792,6 +812,9 @@ video {
   background-color: rgba(54, 58, 79, 0.4);
   background-color: rgba(var(--ctp-surface0), 0.4);
 }
+.bg-current {
+  background-color: currentColor;
+}
 .bg-cover {
   background-size: cover;
 }
@@ -800,6 +823,9 @@ video {
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.p-\[2px\] {
+  padding: 2px;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -942,12 +968,24 @@ video {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.outline-lavender {
+  outline-color: rgb(183, 189, 248);
+  outline-color: rgb(var(--ctp-lavender));
+}
 .transition-colors {
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 body {
@@ -1215,5 +1253,45 @@ body {
 
 	        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
+.switch-pseudo::before,  .switch-pseudo::after {
 
-/*# sourceMappingURL=main.1763c9d5.css.map*/
+	position: absolute;
+
+	transition-property: all;
+
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	transition-duration: 300ms;
+
+	display: block;
+
+	width: 0.75rem;
+
+	height: 0.75rem;
+
+	--tw-bg-opacity: 1;
+
+	background-color: rgba(var(--ctp-surface2), var(--tw-bg-opacity));
+
+	content: '';
+}
+
+.switch-pseudo::before {
+	left: .3rem;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewbox=%270 0 12 12%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271px%27%3E%3Cpath d=%27M1.4,5.582,5.764,9.945,14.4,1.4%27 /%3E%3C/svg%3E");
+	        mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewbox=%270 0 12 12%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271px%27%3E%3Cpath d=%27M1.4,5.582,5.764,9.945,14.4,1.4%27 /%3E%3C/svg%3E");
+}
+
+.switch-pseudo.active::before {
+
+	background-color: currentColor;
+}
+
+.switch-pseudo::after {
+	right: .3rem;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg viewBox=%270 0 16 16%27 xmlns=%27http://www.w3.org/2000/svg%27 fill=%27currentColor%27%3E%3Cpath d=%27M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z%27/%3E%3C/svg%3E");
+	        mask: url("data:image/svg+xml,%3Csvg viewBox=%270 0 16 16%27 xmlns=%27http://www.w3.org/2000/svg%27 fill=%27currentColor%27%3E%3Cpath d=%27M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z%27/%3E%3C/svg%3E");
+}
+
+
+/*# sourceMappingURL=main.68e8a093.css.map*/
