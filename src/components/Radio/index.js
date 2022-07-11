@@ -13,7 +13,7 @@ export const RadioColorVariations = {
 };
 
 export const Radio = ({ color, label, ...props }) => {
-	const id = useId('cb');
+	const id = useId('rd');
 
 	return (
 		<div className="inline-flex items-center">

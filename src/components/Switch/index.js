@@ -13,7 +13,7 @@ export const SwitchColorVariations = {
 }
 
 export const Switch = ({ color, value, label, ...props }) => {
-	const id = useId();
+	const id = useId('sw');
 
 	/**
 	 * @param {Event} event 
