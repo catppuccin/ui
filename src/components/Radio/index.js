@@ -15,43 +15,46 @@ export const RadioColorVariations = {
 export const Radio = ({ color, label, ...props }) => {
 	const id = useId('cb');
 
-	return <div className="inline-flex items-center">
-		<input
-			type="radio"
-			id={id}
-			className={cx(
-				RadioColorVariations[color],
-				'radio-after',
-				'appearance-none',
-				'transition-colors',
-				'h-7 w-7',
-				'rounded-full',
-				'bg-surface0/40',
-				'border-2',
-				'border-surface2',
-				'checked:border-current',
-				'checked:bg-surface1/70',
-				'inline-flex',
-				'items-center',
-				'justify-center',
-				'cursor-pointer',
-				'disabled:cursor-not-allowed',
-				'disabled:opacity-60',
-			)}
-
-			{...props}
-		/>
-
-		{label != null ?
-			<label
-				htmlFor={id}
-				children={label}
+	return (
+		<div className="inline-flex items-center">
+			<input
+				type="radio"
+				id={id}
 				className={cx(
-					'ml-2',
+					RadioColorVariations[color],
+					'radio-after',
+					'appearance-none',
+					'transition-colors',
+					'h-7 w-7',
+					'rounded-full',
+					'bg-surface0/40',
+					'border-2',
+					'border-surface2',
+					'checked:border-current',
+					'checked:bg-surface1/70',
+					'inline-flex',
+					'items-center',
+					'justify-center',
+					'cursor-pointer',
+					'outline-lavender',
+					'disabled:cursor-not-allowed',
+					'disabled:opacity-60',
 				)}
+
+				{...props}
 			/>
-		: null}
-	</div>
+
+			{label != null ?
+				<label
+					htmlFor={id}
+					children={label}
+					className={cx(
+						'ml-2',
+					)}
+				/>
+				: null}
+		</div>
+	);
 
 };
 
