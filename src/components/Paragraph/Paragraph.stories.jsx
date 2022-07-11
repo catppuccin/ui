@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Paragraph, ParagraphColorVariations } from '../components/Paragraph';
+import { Paragraph, ParagraphColorVariations } from '.';
 
 export default {
 	title: 'Components/Paragraph',

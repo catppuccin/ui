@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Avatar } from '../components/Avatar';
+import { Avatar } from '.';
 
 export default {
 	title: 'Components/Avatar',
