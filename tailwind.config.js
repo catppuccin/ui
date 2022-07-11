@@ -4,7 +4,11 @@ module.exports = {
 		'./src/**/*.{html,js,jsx}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				'inter': ["Inter", "ui-sans-serif"],
+			},
+		},
 	},
 	plugins: [
 		require('@catppuccin/tailwindcss')({
