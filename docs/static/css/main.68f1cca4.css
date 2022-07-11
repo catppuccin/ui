@@ -637,6 +637,9 @@ video {
   bottom: 0px;
   left: 0px;
 }
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1114,6 +1117,14 @@ body {
   border-color: rgba(183, 189, 248, var(--tw-border-opacity));
   border-color: rgba(var(--ctp-lavender), var(--tw-border-opacity));
 }
+
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
+.disabled\:opacity-60:disabled {
+  opacity: 0.6;
+}
 .docs-story {
     --tw-bg-opacity: 1;
     background-color: rgba(var(--ctp-base), var(--tw-bg-opacity));
@@ -1160,4 +1171,4 @@ body {
 	        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
-/*# sourceMappingURL=main.4fd88c16.css.map*/
+/*# sourceMappingURL=main.68f1cca4.css.map*/
