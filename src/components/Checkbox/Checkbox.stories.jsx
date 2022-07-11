@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Checkbox, CheckboxColorVariations } from './index';
+import { Checkbox, CheckboxColorVariations } from '.';
 
 export default {
 	title: 'Components/Checkbox',

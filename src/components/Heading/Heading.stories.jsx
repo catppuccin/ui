@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, HeadingColorVariations } from '../components/Heading';
+import { Heading, HeadingColorVariations } from '.';
 
 export default {
 	title: 'Components/Heading',

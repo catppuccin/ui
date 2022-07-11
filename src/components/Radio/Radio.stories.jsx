@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Radio, RadioColorVariations } from './index';
+import { Radio, RadioColorVariations } from '.';
 
 export default {
 	title: 'Components/Radio',

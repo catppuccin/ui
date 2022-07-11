@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Anchor } from '../components/Anchor';
+import { Anchor } from '.';
 
 export default {
 	title: 'Components/Anchor',
