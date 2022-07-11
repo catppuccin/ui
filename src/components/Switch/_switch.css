@@ -1,0 +1,25 @@
+.switch-pseudo::before, .switch-pseudo::after {
+	@apply absolute;
+	@apply transition-all;
+	@apply duration-300;
+	@apply block;
+	@apply w-3;
+	@apply h-3;
+	@apply bg-surface2;
+
+	content: '';
+}
+
+.switch-pseudo::before {
+	left: .3rem;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 12 12' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='1px'%3E%3Cpath d='M1.4,5.582,5.764,9.945,14.4,1.4' /%3E%3C/svg%3E");
+}
+
+.switch-pseudo.active::before {
+	@apply bg-current;
+}
+
+.switch-pseudo::after {
+	right: .3rem;
+	mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='currentColor'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3C/svg%3E");
+}
