@@ -68,6 +68,7 @@ export const Switch = ({ color, value, label, ...props }) => {
 					'rounded-[20px]',
 					'transition-colors',
 					'outline-lavender',
+					'overflow-hidden',
 					{
 						'border-surface2': !value,
 						'border-current': value,
