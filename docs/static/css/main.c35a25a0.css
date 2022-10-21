@@ -714,6 +714,9 @@ video {
 .justify-center {
   justify-content: center;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1273,25 +1276,43 @@ body {
 
 	background-color: rgba(var(--ctp-surface2), var(--tw-bg-opacity));
 
-	content: '';
+	content: ''
 }
 
 .switch-pseudo::before {
+
+	opacity: 0;
 	left: .3rem;
 	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewbox=%270 0 12 12%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271px%27%3E%3Cpath d=%27M1.4,5.582,5.764,9.945,14.4,1.4%27 /%3E%3C/svg%3E");
 	        mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewbox=%270 0 12 12%27 fill=%27none%27 stroke=%27currentColor%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271px%27%3E%3Cpath d=%27M1.4,5.582,5.764,9.945,14.4,1.4%27 /%3E%3C/svg%3E");
+	-webkit-transform: translateX(-1ch);
+	        transform: translateX(-1ch)
 }
 
 .switch-pseudo.active::before {
 
 	background-color: currentColor;
+
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	        transform: translateX(0)
 }
 
 .switch-pseudo::after {
+
+	opacity: 1;
 	right: .3rem;
 	-webkit-mask: url("data:image/svg+xml,%3Csvg viewBox=%270 0 16 16%27 xmlns=%27http://www.w3.org/2000/svg%27 fill=%27currentColor%27%3E%3Cpath d=%27M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z%27/%3E%3C/svg%3E");
 	        mask: url("data:image/svg+xml,%3Csvg viewBox=%270 0 16 16%27 xmlns=%27http://www.w3.org/2000/svg%27 fill=%27currentColor%27%3E%3Cpath d=%27M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z%27/%3E%3C/svg%3E");
+	-webkit-transform: translateX(0);
+	        transform: translateX(0)
 }
 
+.switch-pseudo.active::after {
 
-/*# sourceMappingURL=main.68e8a093.css.map*/
+	opacity: 0;
+	-webkit-transform: translateX(1ch);
+	        transform: translateX(1ch)
+}
+
+/*# sourceMappingURL=main.c35a25a0.css.map*/
