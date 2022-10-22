@@ -1,6 +1,7 @@
 import '../src/fonts.css';
 import '../src/main.css';
 import './storybook.css';
+import Theme from "./Theme";
 
 const palettes = {
 	'Latte': 'latte',
@@ -30,7 +31,7 @@ const getTheme = (themeName) => {
 	return palettes[themeName];
 };
 
-const withThemeProvider = (Story, context)=>{
+const withThemeProvider = (Story, context) => {
 	const theme = getTheme(context.globals.theme);
 
 	// Clear all class names on preview body
@@ -54,6 +55,9 @@ export const parameters = {
 			date: /Date$/,
 		},
 	},
+	docs: {
+		theme: Theme,
+	}
 };
 
 export const decorators = [withThemeProvider];
