@@ -29,7 +29,7 @@
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [didair](https://github.com/didair)
 
 &nbsp;
 
