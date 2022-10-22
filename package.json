@@ -1,31 +1,30 @@
 {
-	"name": "catuccino",
+	"name": "@catppuccin/ui",
 	"version": "0.1.20",
 	"private": false,
 	"description": "A React.JS ui kit based on 😸 catppuccin - Soothing pastel theme for the high-spirited!",
 	"keywords": [
-		"catuccino",
 		"catppuccin",
 		"ui-kit",
 		"ui",
 		"component library"
 	],
-	"repository": "didair/catuccino",
-	"homepage": "https://didair.github.io/catuccino",
+	"repository": "catppuccin/ui",
+	"homepage": "https://github.com/catppuccin/ui",
 	"license": "MIT",
-	"author": "Andreas Ekström <didair@msn.com>",
+	"author": "Catppuccin Org <releases@catppuccin.com>",
 	"source": "src/index.js",
-	"main": "./dist/catuccino.js",
-	"jsnext:main": "./dist/catuccino.modern.js",
-	"module": "./dist/catuccino.module.js",
+	"main": "./dist/catppuccin-ui.js",
+	"jsnext:main": "./dist/catppuccin-ui.modern.js",
+	"module": "./dist/catppuccin-ui.module.js",
 	"syntax": {
-		"esmodules": "./dist/catuccino.modern.js"
+		"esmodules": "./dist/catppuccin-ui.modern.js"
 	},
 	"exports": {
 		".": {
-			"browser": "./dist/catuccino.module.js",
-			"import": "./dist/catuccino.module.js",
-			"require": "./dist/catuccino.js"
+			"browser": "./dist/catppuccin-ui.module.js",
+			"import": "./dist/catppuccin-ui.module.js",
+			"require": "./dist/catppuccin-ui.js"
 		}
 	},
 	"files": [
