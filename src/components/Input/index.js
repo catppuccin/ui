@@ -1,10 +1,11 @@
 import cx from 'classnames';
 
-export const Input = (props) => {
+export const Input = ({ className, ...props }) => {
 
 	return (
 		<input
 			className={cx(
+				'w-full',
 				'bg-surface0/40',
 				'border-overlay0',
 				'active:border-lavender',
@@ -14,6 +15,7 @@ export const Input = (props) => {
 				'rounded-md',
 				'outline-none',
 				'transition-colors',
+				className,
 			)}
 			{...props}
 		/>
