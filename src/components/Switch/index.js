@@ -10,7 +10,7 @@ import './_switch.css';
 export const SwitchColorVariations = {
 	...typography.base,
 	...typography.highlights,
-}
+};
 
 export const Switch = ({ color, value, label, ...props }) => {
 	const id = useId('sw');

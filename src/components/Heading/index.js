@@ -20,13 +20,14 @@ export const HeadingColorVariations = {
 	...typography.highlights
 };
 
-export const Heading = ({ size, color, ...props }) => {
+export const Heading = ({ className, size, color, ...props }) => {
 
 	return (
 		<h2
 			className={cx(
 				HeadingSizeVariations[size],
 				HeadingColorVariations[color],
+				className,
 			)}
 			{...props}
 		/>

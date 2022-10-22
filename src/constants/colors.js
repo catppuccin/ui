@@ -1,14 +1,21 @@
-export const backgrounds = [
-	'bg-base',
-	'bg-crust',
-	'bg-mantle',
-	'bg-surface0',
-	'bg-surface1',
-	'bg-surface1',
-	'bg-overlay0',
-	'bg-overlay1',
-	'bg-overlay2',
-];
+export const backgrounds = {
+	base: 'bg-base',
+	crust: 'bg-crust',
+	mantle: 'bg-mantle',
+	'surface0': 'bg-surface0',
+	'surface1': 'bg-surface1',
+	'overlay0': 'bg-overlay0',
+	'overlay1': 'bg-overlay1',
+	'overlay2': 'bg-overlay2',
+};
+
+export const borders = {
+	base: 'border-base',
+	crust: 'border-crust',
+	mantle: 'border-mantle',
+	surface: 'border-surface1',
+	overlay: 'border-overlay2',
+};
 
 export const typography = {
 	base: {
