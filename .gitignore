@@ -10,6 +10,7 @@
 
 # production
 /build
+/docs-build
 /dist
 /storybook-static
 
