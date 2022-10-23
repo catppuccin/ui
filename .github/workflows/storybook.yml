@@ -6,19 +6,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          persist-credentials: false
-      - name: Install and Build 🔧
-        run: | # Install npm packages and build the Storybook files
-          npm install
+          node-version: 16
+          cache: 'npm'
+      - name: Install & Build
+        run: |
+          npm ci
           npm run build-storybook
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: docs-build # The folder that the build-storybook script generates files.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: docs # The folder that we serve our Storybook 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs-build
