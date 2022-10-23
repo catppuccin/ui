@@ -2,7 +2,7 @@
   "name": "@catppuccin/ui",
   "version": "0.1.20",
   "private": false,
-  "description": "A React.JS ui kit based on 😸 catppuccin - Soothing pastel theme for the high-spirited!",
+  "description": "Soothing pastel React components! A React.JS UI kit based on Catppuccin.",
   "keywords": [
     "catppuccin",
     "ui-kit",
@@ -13,6 +13,9 @@
   "homepage": "https://github.com/catppuccin/ui",
   "license": "MIT",
   "author": "Catppuccin Org <releases@catppuccin.com>",
+  "contributors": [
+    "Andreas Ekström <didair@msn.com>"
+  ],
   "source": "src/index.js",
   "main": "./dist/catppuccin-ui.js",
   "jsnext:main": "./dist/catppuccin-ui.modern.js",
