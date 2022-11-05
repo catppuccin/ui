@@ -19,7 +19,7 @@ const Template = (args) => <Heading {...args} />;
 
 export const Preview = Template.bind({});
 Preview.args = {
-	size: '4xl',
+	size: 'h1',
 	color: 'text',
 	children: 'Heading 1',
 };

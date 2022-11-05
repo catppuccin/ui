@@ -21,19 +21,19 @@ export const Foreground = Template.bind({});
 Foreground.args = {
 	children: 'Text in paragraph',
 	color: 'text',
-	size: 'base',
+	size: 'default',
 };
 
 export const Subtext = Template.bind({});
 Subtext.args = {
 	children: 'Text in paragraph',
 	color: 'subtext',
-	size: 'base',
+	size: 'default',
 };
 
 export const Overlay = Template.bind({});
 Overlay.args = {
 	children: 'Text in paragraph',
 	color: 'overlay',
-	size: 'base',
+	size: 'default',
 };

@@ -1,0 +1,6 @@
+.head::before {
+  content: "#";
+  font-size: 0.75em;
+  margin-right: 0.3rem;
+  @apply text-subtext0;
+}
