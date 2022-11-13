@@ -11,12 +11,7 @@ jobs:
           cache: 'npm'
       - run: npm install
       - name: Release as Next
-        if: startsWith(github.ref, 'refs/tags/v') != true
         uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.NPM_TOKEN }}
-      - name: Release
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: JS-DevTools/npm-publish@v1
-        with:
+          access: public
           token: ${{ secrets.NPM_TOKEN }}
