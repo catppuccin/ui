@@ -1,4 +1,6 @@
-on: push
+on:
+- push
+- tag
 
 jobs:
   publish:
@@ -10,6 +12,13 @@ jobs:
           node-version: 16
           cache: 'npm'
       - run: npm install
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Release as Next
+        # we need the inverted conditional here ?
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
