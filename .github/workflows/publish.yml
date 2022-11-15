@@ -10,6 +10,7 @@ jobs:
           node-version: 16
           cache: 'npm'
       - run: npm install
+      - run: npm run build
       - name: Release as Next
         uses: JS-DevTools/npm-publish@v1
         with:
