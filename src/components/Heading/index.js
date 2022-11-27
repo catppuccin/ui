@@ -1,19 +1,8 @@
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { typography } from '../../constants/colors';
-
-export const HeadingSizeVariations = {
-	'lg': 'text-lg',
-	'xl': 'text-xl',
-	'2xl': 'text-2xl',
-	'3xl': 'text-3xl',
-	'4xl': 'text-4xl',
-	'5xl': 'text-5xl',
-	'6xl': 'text-6xl',
-	'7xl': 'text-7xl',
-	'8xl': 'text-8xl',
-	'9xl': 'text-9xl',
-};
+import { sizing, sizingWeights } from '../../constants/typography';
+import './_heading.css'
 
 export const HeadingColorVariations = {
 	...typography.base,
@@ -25,8 +14,10 @@ export const Heading = ({ className, size, color, ...props }) => {
 	return (
 		<h2
 			className={cx(
-				HeadingSizeVariations[size],
+				sizing[size],
 				HeadingColorVariations[color],
+        'head',
+        sizingWeights[size],
 				className,
 			)}
 			{...props}
@@ -39,7 +30,7 @@ Heading.propTypes = {
 	/**
 	 * Configure text size of Heading
 	 */
-	size: PropTypes.oneOf(Object.keys(HeadingSizeVariations)),
+	size: PropTypes.oneOf(Object.keys(sizing)),
 
 	/**
 	 * Configure text color
@@ -48,6 +39,6 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-	size: 'xl',
+	size: 'h1',
 	color: 'text',
 };
