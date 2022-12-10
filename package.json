@@ -32,7 +32,7 @@
 	},
 	"files": [
 		"dist",
-		"dist/*.css",
+		"dist/*.css"
 	],
 	"scripts": {
 		"build": "microbundle --no-compress -f cjs,esm,modern --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
