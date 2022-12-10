@@ -28,7 +28,8 @@
 			"browser": "./dist/catppuccin-ui.module.js",
 			"import": "./dist/catppuccin-ui.module.js",
 			"require": "./dist/catppuccin-ui.js"
-		}
+		},
+		"./tailwind": "./dist/tailwind.config.js"
 	},
 	"files": [
 		"dist",
