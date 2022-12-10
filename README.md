@@ -15,6 +15,39 @@
 
 _TODO_
 
+### With TailwindCSS
+To get started you need to extend (or add) the @catppuccin/ui Tailwind configuration.
+
+Step 1: Import configuration
+```
+// tailwind.config.js
+const catppuccin = require('@catppuccin/ui/tailwind');
+```
+
+Step 2: Extend your existing configuration
+
+```
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: [
+		...catppuccin.content,
+	],
+	theme: {
+		...catppuccin.theme,
+	},
+	plugins: [
+		...catppuccin.plugins,
+	],
+};
+```
+
+This will add the @catppuccin/tailwindcss plugin + a few other default settings.
+
+### Standalone
+_Not supported yet (but the css file is located at: `@catppuccin/ui/dist/catppuccin-ui.css`) if u wanna give it a go._
+
+
 ## 💝 Thanks to
 
 - [didair](https://github.com/didair)
